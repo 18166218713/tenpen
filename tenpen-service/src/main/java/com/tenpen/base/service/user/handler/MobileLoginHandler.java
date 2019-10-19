@@ -1,22 +1,17 @@
 package com.tenpen.base.service.user.handler;
 
-import com.tenpen.base.dao.OrgUsersLoginMapper;
 import com.tenpen.base.dao.OrgUsersMapper;
 import com.tenpen.base.domain.model.OrgUsers;
 import com.tenpen.base.domain.model.OrgUsersExample;
-import com.tenpen.base.domain.model.OrgUsersLogin;
 import com.tenpen.base.enums.DeleteFlagEnum;
 import com.tenpen.base.enums.LoginTypeEnum;
 import com.tenpen.base.enums.UserStatusEnum;
 import com.tenpen.base.enums.UserTypeEnum;
 import com.tenpen.base.exceptions.ServiceException;
-import com.tenpen.base.manager.user.UserManager;
 import com.tenpen.base.redis.RedisClient;
-import com.tenpen.base.service.user.impl.UserServiceImpl;
 import com.tenpen.base.util.FastJsonUtils;
 import com.tenpen.base.util.IdUtils;
 import com.tenpen.base.util.ParamsUtils;
-import com.tenpen.base.util.ResponseResult;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
