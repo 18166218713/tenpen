@@ -45,6 +45,11 @@ public class CreateProductDTO implements Serializable{
     private String useTime;
 
     /**
+     * 主图
+     */
+    private String mainImageUrl;
+
+    /**
      * 图片list
      */
     private List<String> imageList;
