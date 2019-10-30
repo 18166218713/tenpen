@@ -2,8 +2,13 @@ package com.tenpen.base.dao;
 
 import com.tenpen.base.domain.model.OrgProducts;
 import com.tenpen.base.domain.model.OrgProductsExample;
-import java.util.List;
+import com.tenpen.base.dto.product.request.QueryMyProductDTO;
+import com.tenpen.base.dto.product.request.QueryProductDTO;
+import com.tenpen.base.dto.product.response.MyProductListResponseDTO;
+import com.tenpen.base.dto.product.response.ProductListResponseDTO;
 import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 public interface OrgProductsMapper {
     /**
@@ -93,4 +98,8 @@ public interface OrgProductsMapper {
      * @mbggenerated Mon Sep 30 11:05:29 CST 2019
      */
     int updateByPrimaryKey(OrgProducts record);
+
+    List<ProductListResponseDTO> getProducts(QueryProductDTO request);
+
+    List<MyProductListResponseDTO> getMyProducts(QueryMyProductDTO request);
 }

@@ -1,13 +1,13 @@
 package com.tenpen.base.service.product;
 
 import com.tenpen.base.domain.model.OrgProducts;
-import com.tenpen.base.service.product.dto.request.CreateProductDTO;
-import com.tenpen.base.service.product.dto.request.QueryMyProductDTO;
-import com.tenpen.base.service.product.dto.request.QueryProductDTO;
-import com.tenpen.base.service.product.dto.response.MyProductDetailDTO;
-import com.tenpen.base.service.product.dto.response.MyProductListResponseDTO;
-import com.tenpen.base.service.product.dto.response.ProductDetailDTO;
-import com.tenpen.base.service.product.dto.response.ProductListResponseDTO;
+import com.tenpen.base.dto.product.request.CreateProductDTO;
+import com.tenpen.base.dto.product.request.QueryMyProductDTO;
+import com.tenpen.base.dto.product.request.QueryProductDTO;
+import com.tenpen.base.dto.product.response.MyProductDetailDTO;
+import com.tenpen.base.dto.product.response.MyProductListResponseDTO;
+import com.tenpen.base.dto.product.response.ProductDetailDTO;
+import com.tenpen.base.dto.product.response.ProductListResponseDTO;
 
 import java.util.List;
 

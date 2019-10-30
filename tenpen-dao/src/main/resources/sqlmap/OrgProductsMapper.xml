@@ -490,4 +490,32 @@
       remark = #{remark,jdbcType=VARCHAR}
     where id = #{id,jdbcType=VARCHAR}
   </update>
+
+  <select id="getProducts" parameterType="com.tenpen.base.dto.product.request.QueryProductDTO"
+          resultType="com.tenpen.base.dto.product.response.ProductListResponseDTO">
+    SELECT
+      p.id productId,
+      p.title,
+      p.price,
+      p.main_image_url mainImageUrl,
+      p.create_time createTime
+    FROM org_products p
+    <if test="keyword!=null and keyword!=''">
+      AND p.title like CONCAT('%',#{keyword,jdbcType=VARCHAR},'%')
+    </if>
+    ORDER BY p.create_time DESC limit #limit# offset #offset#
+  </select>
+
+  <select id="getMyProducts" parameterType="com.tenpen.base.dto.product.request.QueryMyProductDTO"
+          resultType="com.tenpen.base.dto.product.response.MyProductListResponseDTO">
+    SELECT
+    p.id productId,
+    p.title,
+    p.price,
+    p.main_image_url mainImageUrl,
+    p.create_time createTime,
+    p.status
+    FROM org_products p WHERE p.create_by=#{userId}
+    ORDER BY p.create_time DESC limit #limit# offset #offset#
+  </select>
 </mapper>

@@ -12,5 +12,14 @@
     <groupId>com.tenpen</groupId>
     <artifactId>tenpen-domain</artifactId>
 
-
+    <dependencies>
+        <dependency>
+            <groupId>com.tenpen</groupId>
+            <artifactId>tenpen-common</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+    </dependencies>
 </project>

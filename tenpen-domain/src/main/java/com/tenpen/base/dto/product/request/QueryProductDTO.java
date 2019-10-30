@@ -1,4 +1,4 @@
-package com.tenpen.base.service.product.dto.request;
+package com.tenpen.base.dto.product.request;
 
 import com.tenpen.base.util.BaseQueryConditionDTO;
 import lombok.Data;

@@ -1,27 +1,29 @@
-package com.tenpen.base.service.product.dto.request;
+package com.tenpen.base.dto.product.response;
 
 import lombok.Data;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
+import java.util.Date;
 import java.util.List;
 
 @Data
-public class CreateProductDTO implements Serializable{
+public class ProductDetailDTO implements Serializable{
 
     /**
-     * 商品名称
+     * 商品ID
      */
-    private String productName;
+    private String productId;
 
     /**
-     * 价格
-     */
-    private String price;
-
-    /**
-     * 主题
+     * 商品主题
      */
     private String title;
+
+    /**
+     * 商品价格
+     */
+    private BigDecimal price;
 
     /**
      * 职业
@@ -36,12 +38,12 @@ public class CreateProductDTO implements Serializable{
     /**
      * 使用时间
      */
-    private String useTime;
+    private Integer useTime;
 
     /**
-     * 描述
+     * 发布时间
      */
-    private String remark;
+    private Date createTime;
 
     /**
      * 图片list

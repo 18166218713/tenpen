@@ -1,4 +1,4 @@
-package com.tenpen.base.service.product.dto.response;
+package com.tenpen.base.dto.product.response;
 
 import lombok.Data;
 
@@ -15,9 +15,9 @@ public class MyProductListResponseDTO implements Serializable{
     private String productId;
 
     /**
-     * 商品名称
+     * 商品主题
      */
-    private String productName;
+    private String title;
 
     /**
      * 商品价格
@@ -25,9 +25,9 @@ public class MyProductListResponseDTO implements Serializable{
     private BigDecimal price;
 
     /**
-     * 图片
+     * 主图
      */
-    private String imageUrl;
+    private String mainImageUrl;
 
     /**
      * 发布时间
