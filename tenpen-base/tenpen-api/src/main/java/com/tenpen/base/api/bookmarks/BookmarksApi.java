@@ -1,16 +1,19 @@
 package com.tenpen.base.api.bookmarks;
 
-import com.tenpen.base.api.incomes.IncomesApi;
 import com.tenpen.base.service.bookmarks.BookmarkService;
 import com.tenpen.base.util.ResponseResult;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestHeader;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.List;
-import java.util.Map;
 
 /**
  * Created by x00376013 on 2019/9/26.
@@ -22,9 +25,9 @@ public class BookmarksApi {
     private static final Logger logger = LoggerFactory.getLogger(BookmarksApi.class);
 
     @Autowired
+    BookmarkService bookmarkService;
 
-    @RequestMapping(value = "/getBookmarks", method =     BookmarkService bookmarkService;
-            RequestMethod.GET)
+    @RequestMapping(value = "/getBookmarks", method = RequestMethod.GET)
     @ResponseBody
     public String getBookmarks(@RequestHeader("Authorization") String authorization,
                              @RequestHeader("Date") String date, @RequestHeader("RequestId") String requestId,
