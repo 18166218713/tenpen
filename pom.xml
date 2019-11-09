@@ -132,7 +132,6 @@
 			<version>2.9.9.3</version>
 		</dependency>
 
-
 		<dependency>
 			<groupId>com.aliyun</groupId>
 			<artifactId>aliyun-java-sdk-core</artifactId>
