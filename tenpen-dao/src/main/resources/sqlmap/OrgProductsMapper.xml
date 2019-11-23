@@ -500,6 +500,7 @@
       p.main_image_url mainImageUrl,
       p.create_time createTime
     FROM org_products p
+    WHERE p.status in (4)
     <if test="keyword!=null and keyword!=''">
       AND p.title like CONCAT('%',#{keyword,jdbcType=VARCHAR},'%')
     </if>

@@ -15,6 +15,7 @@ import com.tenpen.base.dto.product.response.MyProductDetailDTO;
 import com.tenpen.base.dto.product.response.MyProductListResponseDTO;
 import com.tenpen.base.dto.product.response.ProductDetailDTO;
 import com.tenpen.base.dto.product.response.ProductListResponseDTO;
+import com.tenpen.base.util.IdUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -56,6 +57,7 @@ public class ProductServiceImpl implements ProductService {
         // TODO: 2019/10/30 添加字段：是否包邮,主图
         OrgProducts orgProducts=new OrgProducts();
         BeanUtils.copyProperties(request,orgProducts);
+        orgProducts.setId(IdUtils.getId());
         orgProducts.setQty(1);
         orgProducts.setStatus("2");
         orgProducts.setCreateTime(new Date());
@@ -63,6 +65,7 @@ public class ProductServiceImpl implements ProductService {
         if (request.getImageList()!=null && request.getImageList().size()>0){
             for (String imageUrl:request.getImageList()){
                 OrgProductsImages images=new OrgProductsImages();
+                images.setId(IdUtils.getId());
                 images.setProductId(orgProducts.getId());
                 images.setImageUrl(imageUrl);
                 images.setStatus("1");
